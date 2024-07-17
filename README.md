@@ -1,2 +1,3 @@
-# react-19-hooks
-Learning React 19 hooks
+# React 19 Hooks
+
+Learning about the React 19 hooks.
