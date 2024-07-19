@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "next": "14.2.5",
-    "react": "19.0.0-rc-163365a0-20240717",
-    "react-dom": "19.0.0-rc-163365a0-20240717"
+    "react": "19.0.0-rc-512b09b2-20240718",
+    "react-dom": "19.0.0-rc-512b09b2-20240718"
   },
   "devDependencies": {
     "@types/node": "^20",
