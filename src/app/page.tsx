@@ -8,7 +8,6 @@ export default function Home() {
           <div><Link href="/use-form-status">useFormStatus</Link></div>
           <div><Link href="/use-action-state">useActionState</Link></div>
           <div><Link href="/use-optimistic">useOptimistic</Link></div>
-          <div><Link href="/use">use</Link></div>
       </main>
   );
 }
