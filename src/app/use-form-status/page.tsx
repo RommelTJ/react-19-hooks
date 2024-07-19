@@ -9,7 +9,7 @@ const submitAction = async (data: FormData) => {
 
 const Form = () => {
   const { pending, data } = useFormStatus();
-  
+
   return (
     <div>
       <div>UseFormStatus example</div>
