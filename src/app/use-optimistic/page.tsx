@@ -4,12 +4,12 @@ import { useOptimistic, useState } from "react";
 
 const submitTitle = async (formData: FormData) => {
     console.log("Submitting title: ", formData);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 5000));
     // Decide randomly whether to throw an error or return a string
     if (Math.random() < 0.5) {
       throw new Error("Boom roasted!");
     } else {
-      return "Hey, I'm the real title!";
+      return String(formData.get("title")) + "!";
     }
 };
 
@@ -26,7 +26,7 @@ const submitTitle = async (formData: FormData) => {
  * https://react.dev/reference/react/useOptimistic
  */
 const UseOptimistic = () => {
-  const [title, setTitle] = useState("Title");
+  const [title, setTitle] = useState("Placeholder title");
   const [optimisticTitle, setOptimisticTitle] = useOptimistic(title);
   const [error, setError] = useState<Error | null>(null);
   const pending = title !== optimisticTitle;
@@ -37,6 +37,7 @@ const UseOptimistic = () => {
     try {
       const updatedTitle = await submitTitle(formData);
       setTitle(updatedTitle);
+      setError(null);
     } catch (e) {
       setError(e as Error);
     }
