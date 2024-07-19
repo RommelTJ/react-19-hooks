@@ -7,6 +7,15 @@ const submitAction = async ({ name }: { name: string }) => {
     return { name };
 };
 
+/*
+ * Notes:
+ * - Standard React form.
+ * - Internal state
+ *   - name, stores the current value of the name.
+ *   - pending, stores the pending state of the form.
+ * - onSubmit of the form, we call submitAction and we simulate a pending state by adding a delay of 2 seconds.
+ * - This is intending to simulate a form that is interacting with some backend API.
+ */
 const OldFormHandling = () => {
     const [name, setName] = useState("");
     const [pending, setPending] = useState(false);
