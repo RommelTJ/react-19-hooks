@@ -9,7 +9,7 @@ const submitAction = async (data: FormData) => {
 
 const Form = () => {
   const { pending, data } = useFormStatus();
-
+  
   return (
     <div>
       <div>UseFormStatus example</div>
@@ -17,7 +17,7 @@ const Form = () => {
       <button disabled={pending} type="submit">
         Submit
       </button>
-      {pending && <p>Submitting {data.get("name")}...</p>}
+      {pending && <p>Submitting {data.get("name") ? String(data.get("name")) : ""}...</p>}
     </div>
   );
 };
